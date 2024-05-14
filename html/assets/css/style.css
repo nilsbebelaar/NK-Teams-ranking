@@ -1,0 +1,42 @@
+body {
+    background-color: #000;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 5em;
+    margin: 0px;
+    padding-top: 20px;
+}
+
+.axis-x path,
+.axis-x line {
+    fill: none;
+    stroke: black;
+}
+
+.axis-y path,
+.axis-y line {
+    fill: none;
+    stroke: black;
+}
+
+.bar-label-points {
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 900;
+    text-anchor: end;
+    font-style: italic;
+}
+
+.bar-label-team {
+    font-family: Lato;
+    font-size: 48px;
+    font-weight: 900;
+    text-anchor: end;
+}
