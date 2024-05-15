@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const year = urlParams.get('year') ?? "2023";
 const category = urlParams.get('category') ?? "Mannen";
 
+document.title = 'NK Teams ' + year + ": " + category;
 
 $(document).ready(function () {
     $("#year").html(year);
