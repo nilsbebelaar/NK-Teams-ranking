@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    var url = 'https://cors-proxy.nilsb.workers.dev/' + 'https://www.atletiek.nu/competitie/' + year + '/competitiestand/' + category + '%20NK%20Teams/'
+    const url = 'https://cors-proxy.nilsb.workers.dev/' + 'https://www.atletiek.nu/competitie/' + year + '/competitiestand/' + category + '%20NK%20Teams/'
     $.get(url, function (response) {
         const html = $(response);
 
