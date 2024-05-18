@@ -9,6 +9,11 @@ $(document).ready(function () {
     $("#category").html(category);
 });
 
+function map_range(value, low1, high1, low2, high2) {
+    if (low1 == high1) { return low2; }
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
+
 $(document).ready(function () {
     const url = 'https://cors-proxy.nilsb.workers.dev/' + 'https://www.atletiek.nu/competitie/' + year + '/competitiestand/' + category + '%20NK%20Teams/'
     $.get(url, function (response) {
@@ -26,16 +31,28 @@ $(document).ready(function () {
             });
 
             // Save data to teams
-            var gender = category;
-            if (!teams[gender]) {
-                teams[gender] = [];
+            if (!teams[category]) {
+                teams[category] = [];
             }
-            teams[gender].push({
+            teams[category].push({
                 'team': cols[1],
                 'rank': cols[3],
-                'points': cols[5]
+                'points': parseInt(cols[5])
             });
         });
+
+        var max = 0;
+        var min = 100;
+        $.each(teams[category], function (i, e) {
+            max = Math.max(max, e["points"]);
+            min = Math.min(min, e["points"]);
+        });
+
+        $.each(teams[category], function (i, e) {
+            teams[category][i]["width"] = map_range(e["points"], min, max, 55, 100)
+        });
+
+        console.log(teams)
         draw_bars(teams);
     });
 });
