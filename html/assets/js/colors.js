@@ -54,5 +54,25 @@ const colors = {
     "GAC Hilversum": {
         "bar": "#1e80be",
         "text": "#ffdb45"
+    },
+    "Leiden Atletiek": {
+        "bar": "#0000cd",
+        "text": "#ffffff"
+    },
+    "Spado": {
+        "bar": "#293483",
+        "text": "#cd191a"
+    },
+    "AV Hera": {
+        "bar": "#ef7d00",
+        "text": "#000000"
+    },
+    "Ciko `66": {
+        "bar": "#ff6400",
+        "text": "#000000"
+    },
+    "AV `34  Apeldoorn": {
+        "bar": "#53af30",
+        "text": "#000000"
     }
 };

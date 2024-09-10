@@ -2,11 +2,12 @@ body {
     /* background-color: #ffffff00; */
     background-image: url(/assets/img/background_512p.png);
     background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     overflow: hidden;
 }
 
-h1 {
+#header {
     color: #fff;
     text-align: center;
     font-family: "Lato", sans-serif;
@@ -14,6 +15,7 @@ h1 {
     font-size: 2.3em;
     margin: 0px 0px -15px 0px;
     padding-top: 10px;
+    width: 100%;
 }
 
 .axis-x path,
@@ -41,4 +43,39 @@ h1 {
     font-size: 36px;
     font-weight: 900;
     text-anchor: start;
+}
+
+.sizeSmall #header {
+    font-size: 2em;
+}
+
+.sizeSmall .bar-label-points {
+    font-size: 16px;
+}
+
+.sizeSmall .bar-label-team {
+    font-size: 15px;
+}
+
+.sizeMedium #header {
+    font-size: 3em;
+}
+
+.sizeMedium .bar-label-points {
+    font-size: 28px;
+}
+
+.sizeMedium .bar-label-team {
+    font-size: 24px;
+}
+
+div.wideLayout {
+    display: flex;
+    flex-direction: row;
+}
+
+.wideLayout #header {
+    width: unset;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
 }

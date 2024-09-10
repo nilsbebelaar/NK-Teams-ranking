@@ -1,12 +1,12 @@
 const urlParams = new URLSearchParams(window.location.search);
-const year = urlParams.get('year') ?? "2023";
-const category = urlParams.get('category') ?? "Mannen";
+const id = urlParams.get('id') ?? "41386";
+const list = urlParams.get('list') ?? "408797";
+const title = urlParams.get('title') ?? null;
 
-document.title = 'NK Teams ' + year + ": " + category;
+document.title = /*'NK Teams ' + year + ": " + */title;
 
 $(document).ready(function () {
-    $("#year").html(year);
-    $("#category").html(category);
+    $("#title").html(title);
 });
 
 function map_range(value, low1, high1, low2, high2) {
@@ -15,45 +15,44 @@ function map_range(value, low1, high1, low2, high2) {
 }
 
 $(document).ready(function () {
-    const url = 'https://cors-proxy.nilsb.workers.dev/' + 'https://www.atletiek.nu/competitie/' + year + '/competitiestand/' + category + '%20NK%20Teams/'
+    const url = 'https://cors-proxy.nilsb.workers.dev/' + 'https://www.atletiek.nu/wedstrijd/teams/' + id
     $.get(url, function (response) {
         const html = $(response);
 
         // Initialize teams object
-        var teams = {};
+        var data = [];
 
         // Loop through each row in the table
-        html.find("table#competitieteams1>tbody>tr").each(function () {
+        html.find('#ranglijst' + list + ' table.tablesorter>tbody>tr').each(function () {
             // Save each column
+            console.log(this)
             var cols = [];
             $(this).find('td').each(function () {
                 cols.push($(this).text().trim());
             });
 
-            // Save data to teams
-            if (!teams[category]) {
-                teams[category] = [];
-            }
-            teams[category].push({
-                'team': cols[1],
-                'rank': cols[3],
+            data.push({
+                'team': cols[2],
+                'rank': cols[0],
                 'points': parseInt(cols[5])
             });
         });
 
         var max = 0;
         var min = 100;
-        $.each(teams[category], function (i, e) {
+        $.each(data, function (i, e) {
             max = Math.max(max, e["points"]);
             min = Math.min(min, e["points"]);
         });
 
-        $.each(teams[category], function (i, e) {
-            teams[category][i]["width"] = map_range(e["points"], min, max, 55, 100)
+        $.each(data, function (i, e) {
+            data[i]["width"] = map_range(e["points"], min, max, 55, 100)
         });
 
-        console.log(teams)
-        draw_bars(teams);
+        console.log(data);
+        var throttledDrawBars = _.throttle(function () { draw_bars(data); /*d3.select('svg').selectAll('*').remove();*/ }, 100);
+        setTimeout(function () { draw_bars(data); }, 100);
+        $(window).on('resize', throttledDrawBars);
     });
 });
 
