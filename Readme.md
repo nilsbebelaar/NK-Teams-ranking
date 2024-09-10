@@ -1,5 +1,5 @@
 # Team ranking atletiek.nu to simple webpage
-Checkout https://nk-teams.nilsb.nl for a preview.
+Checkout https://team-graph.nilsb.nl for a preview.
 Data is pulled from atletiek.nu (through a proxy that strips CORS headers) on page-load and shown in one single graph.
 
 ## Usage
@@ -34,6 +34,6 @@ List ID of what category should be displayed. Can be found from the url once you
 
 
 ## Examples
-> https://nk-teams.nilsb.nl?size=medium&wideLayout&id=41383&list=409166&title=Vrouwen
+> https://team-graph.nilsb.nl?size=medium&wideLayout&id=41383&list=409166&title=Vrouwen
 
-> https://nk-teams.nilsb.nl?size=medium&wideLayout&id=41383&list=409167&title=Mannen
+> https://team-graph.nilsb.nl?size=medium&wideLayout&id=41383&list=409167&title=Mannen
