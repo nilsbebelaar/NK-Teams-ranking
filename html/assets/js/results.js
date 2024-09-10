@@ -25,7 +25,6 @@ $(document).ready(function () {
         // Loop through each row in the table
         html.find('#ranglijst' + list + ' table.tablesorter>tbody>tr').each(function () {
             // Save each column
-            console.log(this)
             var cols = [];
             $(this).find('td').each(function () {
                 cols.push($(this).text().trim());
