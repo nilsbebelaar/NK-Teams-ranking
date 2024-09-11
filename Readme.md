@@ -27,10 +27,10 @@ Presets are made:
 Can be used to show the header left of the graph instead of on top.
 
 ### ```id```
-Competition ID where team data should be pulled from, can be found from the url: www.atletiek.nu/wedstrijd/teams/_**41386**_
+Competition ID where team data should be pulled from, can be found from the url: <ins>ww<span>w.atl</span>etiek.nu/wedstrijd/teams/<b>41386</b></ins>
 
 ### ```list```
-List ID of what category should be displayed. Can be found from the url once you select a category: www.atletiek.nu/wedstrijd/teams/41386/#ranglijst**408797**
+List ID of what category should be displayed. Can be found from the url once you select a category: <ins>ww<span>w.atl</span>etiek.nu/wedstrijd/teams/41386/#ranglijst<b>408797</b></ins>
 
 
 ## Examples
