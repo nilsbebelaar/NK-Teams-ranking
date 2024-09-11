@@ -40,6 +40,7 @@ $(document).ready(function () {
         var max = 0;
         var min = 100;
         $.each(data, function (i, e) {
+            e["team"] += "_" + i
             max = Math.max(max, e["points"]);
             min = Math.min(min, e["points"]);
         });
