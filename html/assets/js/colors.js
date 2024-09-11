@@ -71,6 +71,50 @@ const colors = {
         "bar": "#ff6400",
         "text": "#000000"
     },
+    "AV Olympus `70": {
+        "bar": "#e40520",
+        "text": "#004996"
+    },
+    "AV Sparta": {
+        "bar": "#faee49",
+        "text": "#231d1f"
+    },
+    "ARV Ilion": {
+        "bar": "#f38236",
+        "text": "#0394d9"
+    },
+    "AV De Spartaan": {
+        "bar": "#2f7a06",
+        "text": "#ffffff"
+    },
+    "HAC": {
+        "bar": "#f41f0b",
+        "text": "#ffffff"
+    },
+    "SAV": {
+        "bar": "#fe802b",
+        "text": "#ffffff"
+    },
+    "THOR": {
+        "bar": "#c62c2c",
+        "text": "#ffffff"
+    },
+    "AAV `36": {
+        "bar": "#d92d38",
+        "text": "#ffffff"
+    },
+    "AV Atos": {
+        "bar": "#2daf58",
+        "text": "#f6d82a"
+    },
+    "AV Attila": {
+        "bar": "#ffd204",
+        "text": "#0077c0"
+    },
+    "AV Startbaan": {
+        "bar": "#0f7ec2",
+        "text": "#ffffff"
+    },
     "AV `34  Apeldoorn": {
         "bar": "#53af30",
         "text": "#000000"
