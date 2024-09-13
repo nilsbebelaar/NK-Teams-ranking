@@ -15,6 +15,11 @@ function draw_bars(data) {
         }
     } else {
         team_x = 10; team_y = 12; points_x = -15; points_y = 12;
+    }
+
+    if (params.has('wideLayout')) {
+        graphMargin = { top: 5, right: 10, bottom: 5, left: 10 }
+    } else {
         graphMargin = { top: 10, right: 10, bottom: 5, left: 10 }
     }
 
