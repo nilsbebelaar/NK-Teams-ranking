@@ -46,7 +46,7 @@ $(document).ready(function () {
         });
 
         $.each(data, function (i, e) {
-            data[i]["width"] = map_range(e["points"], min, max, 55, 100)
+            data[i]["width"] = map_range(e["points"], min, max, 65, 100)
         });
 
         console.log(data);
