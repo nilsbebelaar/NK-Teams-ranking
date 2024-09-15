@@ -25,5 +25,7 @@ function updateSize() {
     }
 }
 
-window.onload = updateSize;
-window.onresize = updateSize;
+$(document).ready(function () {
+    window.onload = updateSize;
+    window.onresize = updateSize;
+});
