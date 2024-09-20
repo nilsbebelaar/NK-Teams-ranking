@@ -22,6 +22,7 @@ Optimized presets for different screens. The graph will always fill the entire s
 Presets are made:
 - ```size=small``` for 416px x 208px
 - ```size=medium``` for 768px x 384px
+- ```size=1080p``` for 1920px x 1080px
 
 ### ```wideLayout```
 Can be used to show the header left of the graph instead of on top.

@@ -6,6 +6,9 @@ function draw_bars(data) {
 
     d3.select('svg').selectAll('*').remove();
 
+    var team_x = 10; team_y = 12; points_x = -15; points_y = 12;
+    var graphMargin = { top: 10, right: 10, bottom: 5, left: 10 }
+
     if (params.has('size')) {
         if (params.get('size') === 'small') {
             team_x = 5; team_y = 8; points_x = -10; points_y = 9;
@@ -13,14 +16,14 @@ function draw_bars(data) {
         if (params.get('size') === 'medium') {
             team_x = 10; team_y = 12; points_x = -15; points_y = 14;
         }
-    } else {
-        team_x = 10; team_y = 12; points_x = -15; points_y = 12;
+        if (params.get('size') === '1080p') {
+            team_x = 40; team_y = 23; points_x = -25; points_y = 23;
+            graphMargin = { top: 5, right: 20, bottom: 10, left: 20 }
+        }
     }
 
     if (params.has('wideLayout')) {
         graphMargin = { top: 2, right: 5, bottom: 2, left: 10 }
-    } else {
-        graphMargin = { top: 10, right: 10, bottom: 5, left: 10 }
     }
 
     var svg = d3.select("svg"),
@@ -30,6 +33,11 @@ function draw_bars(data) {
     var x = d3.scaleLinear().rangeRound([0, width]),
         y = d3.scaleBand().rangeRound([0, height]);
 
+    if (params.has('size')) {
+        if (params.get('size') === '1080p') {
+            y.padding(0.1);
+        }
+    }
 
 
     var g = svg.append("g")

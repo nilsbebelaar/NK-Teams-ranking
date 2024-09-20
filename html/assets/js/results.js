@@ -1,7 +1,13 @@
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id') ?? "41386";
-const list = urlParams.get('list') ?? "408797";
-const title = urlParams.get('title') ?? null;
+// const urlParams = new URLSearchParams(window.location.search);
+const id = params.get('id') ?? "41386";
+const list = params.get('list') ?? "408797";
+const title = params.get('title') ?? null;
+var barStartPercent = 65;
+if (params.has('size')) {
+    if (params.get('size') === '1080p') {
+        barStartPercent = 40;
+    }
+}
 
 document.title = /*'NK Teams ' + year + ": " + */title;
 
@@ -46,7 +52,7 @@ $(document).ready(function () {
         });
 
         $.each(data, function (i, e) {
-            data[i]["width"] = map_range(e["points"], min, max, 65, 100)
+            data[i]["width"] = map_range(e["points"], min, max, barStartPercent, 100)
         });
 
         console.log(data);

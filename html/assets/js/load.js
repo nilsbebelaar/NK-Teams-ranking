@@ -1,16 +1,19 @@
 var header = document.getElementById('header');
-var params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 if (params.has('size')) {
     if (params.get('size') === 'small') {
-        $('div.main').addClass('sizeSmall')
+        $('body').addClass('sizeSmall')
     }
     if (params.get('size') === 'medium') {
-        $('div.main').addClass('sizeMedium')
+        $('body').addClass('sizeMedium')
+    }
+    if (params.get('size') === '1080p') {
+        $('body').addClass('size1080p')
     }
 }
 var wide = params.has('wideLayout')
 if (wide) {
-    $('div.main').addClass('wideLayout')
+    $('body').addClass('wideLayout')
 }
 
 function updateSize() {

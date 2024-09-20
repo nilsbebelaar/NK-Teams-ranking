@@ -1,0 +1,39 @@
+.iframe-holder>iframe {
+    width: 1920px;
+    height: 1080px;
+    border: 0;
+    margin: 0;
+}
+
+iframe.hidden {
+    top: 1080px;
+    position: fixed;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    position: fixed;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    right: 30px;
+    top: 5px;
+    background: white;
+    border-radius: 50%;
+    padding: 10px 15px 20px 15px;
+}
+
+.footer {
+    position: fixed;
+    z-index: 10;
+    bottom: 3px;
+    right: 30px;
+    font-weight: bold;
+    font-family: 'Lato';
+    font-size: 28px;
+    color: #fff;
+}
