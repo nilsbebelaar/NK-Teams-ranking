@@ -56,7 +56,7 @@ $(document).ready(function () {
         });
 
         console.log(data);
-        draw_barw(data);
+        draw_bars(data);
         /*var throttledDrawBars = _.throttle(function () { draw_bars(data);}, 100);
         setTimeout(function () { draw_bars(data); }, 3000);
         $(window).on('resize', throttledDrawBars);*/
