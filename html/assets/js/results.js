@@ -56,9 +56,10 @@ $(document).ready(function () {
         });
 
         console.log(data);
-        var throttledDrawBars = _.throttle(function () { draw_bars(data); /*d3.select('svg').selectAll('*').remove();*/ }, 100);
+        draw_barw(data);
+        /*var throttledDrawBars = _.throttle(function () { draw_bars(data);}, 100);
         setTimeout(function () { draw_bars(data); }, 3000);
-        $(window).on('resize', throttledDrawBars);
+        $(window).on('resize', throttledDrawBars);*/
     });
 });
 
