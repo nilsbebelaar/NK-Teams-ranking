@@ -27,6 +27,7 @@ function updateSize() {
         document.getElementById('chart').setAttribute('height', pageHeight - header.offsetHeight);
     }
 }
+updateSize();
 
 $(document).ready(function () {
     window.onload = updateSize;
